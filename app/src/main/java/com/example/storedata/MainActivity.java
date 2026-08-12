@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         dobTxt = findViewById(R.id.editTextText2);
         emailTxt = findViewById(R.id.editTextTextEmailAddress);
         spAvatar = findViewById(R.id.spAvatar);
+        // Initialize the button
+        Button viewDetailsBtn = findViewById(R.id.btnViewDetails);
 
         Button savebtn = findViewById(R.id.button);
 
@@ -43,6 +45,20 @@ public class MainActivity extends AppCompatActivity {
                 saveDetails();
             }
         });
+
+        // Open DetailsActivity when the button is clicked
+        viewDetailsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(
+                        MainActivity.this,
+                        DetailsActivity.class
+                );
+
+                startActivity(i);
+            }
+        });
+
         String[] avatars = {
                 "Avatar 1",
                 "Avatar 2",
@@ -125,4 +141,5 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, DetailsActivity.class);
         startActivity(i);
     }
+
 }

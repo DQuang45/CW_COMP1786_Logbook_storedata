@@ -46,6 +46,15 @@
         app:layout_constraintStart_toStartOf="@+id/spAvatar"
         app:layout_constraintTop_toBottomOf="@+id/spAvatar" />
 
+    <Button
+        android:id="@+id/btnViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Retrieve Details"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
     <TextView
         android:id="@+id/dob"
         android:layout_width="wrap_content"
